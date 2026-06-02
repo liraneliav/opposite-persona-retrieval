@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Secrets
+.env
+*.key
+*secret*
+*service_account*
+
+# Large/local data
+comments_cmv.csv
+data/raw/
+data/intermediate/
+cache/
+*.npy
+*.bin
+*.parquet
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
