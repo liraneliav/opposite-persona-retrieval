@@ -8,7 +8,7 @@ The project builds contradiction-aware persona repositories from a large Reddit 
 
 ```text
 .
-├── paper/                         # Current anonymous paper PDF
+├── paper/                          # The PDF paper
 ├── data/final_repositories/        # Final 300-per-topic persona repositories
 ├── results/                        # Final result tables and statistical tests
 ├── dataset_construction/           # Notebooks for building the proposed repositories
@@ -115,16 +115,6 @@ results/summary_results.csv
 results/by_topic_results.csv
 results/nli_significance_table.csv
 results/stance_significance_table.csv
-```
-
-## Notes on anonymity
-
-This repository was prepared for anonymous review. It avoids author names, email addresses, university names, local machine paths, and API secrets. Before submission, verify the repository by searching for identifying strings.
-
-Suggested checks:
-
-```bash
-grep -RIn "gmail\|MyDrive\|C:\\Users\|Liran\|Haifa\|University" .
 ```
 
 ## Citation
