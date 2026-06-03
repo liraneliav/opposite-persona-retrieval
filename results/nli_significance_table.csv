@@ -1,7 +1,0 @@
-﻿comparison,n_pairs,ours_mean,baseline_mean,mean_difference,p_value,significant_p_0_05
-Contradiction-Aware Persona Retrieval (Ours) vs Hierarchical Persona Refinement (Persona-DB),180,0.2953615400526259,0.05011747413211397,0.24524406592051187,5.132823316561837e-18,True
-Contradiction-Aware Persona Retrieval (Ours) vs Usefulness-Aware Persona Selection (COO),180,0.2953615400526259,0.0676307717959086,0.22773076825671726,7.89387460587457e-15,True
-Contradiction-Aware Persona Retrieval (Ours) vs Persona Fusion Retrieval (Partner Matters),180,0.2953615400526259,0.23884650336371527,0.05651503668891059,0.012689545657736062,True
-Contradiction-Aware Persona Retrieval (Ours) vs Zero-Shot Opposite-Stance Prompting,180,0.2953615400526259,0.23258454534742568,0.06277699470520019,0.020118457631815103,True
-Contradiction-Aware Persona Retrieval (Ours) vs Semantic Persona Retrieval (Mazaré et al.),180,0.2953615400526259,0.23048597441779242,0.06487556563483345,0.03616482134675673,True
-Contradiction-Aware Persona Retrieval (Ours) vs Few-Shot Opposite-Stance Prompting,180,0.2953615400526259,0.24427287843492296,0.05108866161770291,0.044709377598064017,True
