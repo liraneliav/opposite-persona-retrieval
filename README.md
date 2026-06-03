@@ -2,20 +2,18 @@
 
 This repository contains the anonymous implementation and experimental artifacts for the short paper **"Efficient Retrieval of Opposite Personas from Large-Scale Datasets on Controversial Topics"**.
 
-The project builds contradiction-aware persona repositories from a large Reddit ChangeMyView corpus and compares the proposed framework against several baseline persona-retrieval and prompting methods.
+The project builds contradiction-aware persona repositories from a large Reddit ChangeMyView corpus and compares the proposed framework against several baseline persona-retrieval methods.
 
 ## Repository contents
 
 ```text
 .
-├── paper/                          # The PDF paper
 ├── data/final_repositories/        # Final 300-per-topic persona repositories
 ├── results/                        # Final result tables and statistical tests
 ├── dataset_construction/           # Notebooks for building the proposed repositories
-├── evaluation/                     # Baseline comparison and significance-test notebooks
+├── evaluation/                     # Retrieval-baseline comparison and significance-test notebooks
 ├── docs/                           # Data and reproducibility documentation
 ├── requirements.txt
-├── .env.example
 └── .gitignore
 ```
 
@@ -56,19 +54,7 @@ jupyter notebook
 
 ## API key
 
-Several steps use an LLM API for stance labeling, persona refinement, and response generation. Create a local `.env` file:
-
-```bash
-cp .env.example .env
-```
-
-Then set:
-
-```text
-OPENAI_API_KEY=...
-```
-
-Never commit `.env`.
+Several steps use an LLM API for stance labeling, persona refinement, and response generation.
 
 ## Reproducing the dataset construction
 
@@ -93,7 +79,10 @@ Each contains 150 pro and 150 anti persona records.
 
 ## Reproducing the evaluation
 
-To rerun the full baseline comparison, use:
+The included evaluation focuses on retrieval-based baselines reported in the paper: Semantic Persona Retrieval (SPR), Partner Matters, COO, Persona-DB, and the proposed framework.
+
+
+To rerun the retrieval-baseline comparison, use:
 
 ```text
 evaluation/compare_methods_baseline_final.ipynb
@@ -106,6 +95,9 @@ evaluation/baselines_statistical_test_final.ipynb
 ```
 
 The final reported results are included in `results/` so the paper tables can be inspected without rerunning API-dependent experiments.
+The reported NLI contradiction scores in `results/full_results.csv` were computed with `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`, which is separate from the internal method NLI reranker (`MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli`).
+The included result tables retain only the metrics reported in the paper: NLI contradiction, opposite-stance accuracy, and runtime.
+
 
 ## Final result files
 
