@@ -1,0 +1,8 @@
+method,n_cases,valid_output_rate,mean_runtime_ms,mean_runtime_seconds,mean_nli_contradiction,opposite_stance_accuracy
+coo_style_usefulness_ranking_raw_700k,600,1,19248.6,19.2486,0.052133165,0.226666667
+few_shot_gpt_minimal,600,1,5014.54,5.01454,0.077089674,0.853333333
+mazare2018_retrieval_only_raw_700k,600,1,68.465,0.068465,0.208752278,0.405
+ours_stance_nli_gpt_final_repository,600,1,5266.635,5.266635,0.268333639,0.923333333
+partner_matters_persona_fusion_response_selection,600,1,206.5816667,0.206581667,0.240717559,0.45
+personadb_offline_hierarchical_refinement,600,1,3895.695,3.895695,0.055195364,0.386666667
+zero_shot_gpt_minimal,600,1,6863.235,6.863235,0.068069185,0.75
