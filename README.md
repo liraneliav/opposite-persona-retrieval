@@ -27,8 +27,7 @@ This repository implements a contradiction-aware framework for constructing comp
 │   ├── A1_random_top8000_only_resumable.ipynb
 │   ├── A2_no_LLM_stance_filtering.ipynb
 │   ├── A3_no_diversity.ipynb
-│   ├── A4_no_LLM_persona_refinement.ipynb
-│   └── online_ablation_A1_A2_A3_A4.ipynb
+│   └── online_ablation_A1_A2_A3.ipynb
 ├── sensitivity/
 │   └── sensitivity_600.ipynb
 ├── data/final_repositories/
@@ -74,12 +73,10 @@ Some notebooks require API access for LLM inference and local access to intermed
 | --- | --- | --- |
 | Offline persona construction (Sec. 3.1–3.3) | `dataset_construction/step1_...` through `step4_...` | Three Reddit topics; 150 pro + 150 anti per topic |
 | Reddit baseline comparison (Sec. 4.3, Table 1) | `evaluation/baseline_comparison_600_testcases.ipynb`; `results/persona_comparison_*` | 600 test opinions, 200 per topic |
-| SNLI ground-truth benchmark (Sec. 4.1.2, Table 2) | `SNLI_ground_truth/compare_methods_ground_truth.ipynb` | 2,561 premises; three candidate relations |
-| Offline ablation (Sec. 5.2, Fig. 3) | `ablation/A1_...` to `A4_...`, `online_ablation_A1_A2_A3_A4.ipynb` | Individual pipeline-component variants; see note below |
+| SNLI ground-truth benchmark (Sec. 4.1.2, Table 2) | `SNLI_ground_truth/compare_methods_ground_truth.ipynb` | 2,561 premises; three candidate relations; SPR, Partner Matters, COO, Persona-DB, and our framework |
+| Offline ablation (Sec. 5.2, Fig. 3) | `ablation/A1_...` to `A3_...`, `online_ablation_A1_A2_A3.ipynb` | Individual pipeline-component variants; see note below |
 | Weight sensitivity (Sec. 5.3, Fig. 4) | `sensitivity/sensitivity_600.ipynb` | Vary persona-quality weights across 600 cases |
-| Pilot user study (Sec. 4.1.3, Fig. 2) | Analysis scripts/data **not included** | BLM and gun control; aggregate results described in paper |
-
-**Ablation scope:** The paper's Figure 3 discusses A1–A3; the repository also contains an A4 refinement-ablation notebook. A4 should not be presented as a reported figure result unless separately documented.
+| Pilot user study (Sec. 4.1.3, Fig. 2) | Analysis scripts | BLM and gun control; aggregate results described in paper |
 
 ### Baselines and evaluation measures
 
@@ -87,7 +84,7 @@ The Reddit comparison includes **GPT Zero-Shot**, **GPT Few-Shot**, **Semantic P
 
 The **evaluation NLI model** is `MoritzLaurer/mDeBERTa-v3-base-mnli-xnli`, distinct from the **internal retrieval reranker** `MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli`.
 
-SNLI results are evaluated with Accuracy, Recall@2, Mean Reciprocal Rank (MRR), and runtime.
+SNLI compares five methods: SPR, Partner Matters, COO, Persona-DB, and our framework. Results are evaluated with Accuracy, Recall@2, Mean Reciprocal Rank (MRR), and runtime.
 
 ## Reproducibility and current limitations
 
